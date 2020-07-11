@@ -1,0 +1,195 @@
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styling */
+
+body {
+  font-family: Merriweather, serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Utility */
+
+.container {
+  max-width: 768px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-small {padding: 1.5rem 0;}
+.py-medium {padding: 2rem 0;}
+.py-large {padding: 3rem 0;}
+
+.mb-small {margin-bottom: 1.5rem;}
+.mb-medium {margin-bottom: 2rem;}
+.mb-large {margin-bottom: 3rem;}
+
+/* Main Styles */
+
+.main-header {
+  background-color: #2A3640;
+}
+
+.main-header h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.signup h2 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.signup p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+.thick-line {
+  border: 3px solid #2A3640;
+  margin-bottom: .25rem;
+}
+
+.thin-line {
+  border: 1.5px solid #2A3640;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+textarea {    
+  border: none;
+  background-color: #F2F2F2;
+  padding: 1.25rem .75rem;
+  width: 100%;
+  font-family: Meriweather, serif;
+  font-size: 1rem;
+  color: #aaa;
+  border-radius: 3px;
+}
+
+.form-group input[type="text"] {
+  transition: all .3s;
+}
+
+.form-group input[type="text"]:focus {
+  outline: none;
+  border: 1px solid #4EBBB5;
+  box-shadow: 0 0 3px #4EBBB5;
+}
+
+#zip {
+  max-width: 25%;
+}
+
+textarea {
+  resize: none;
+  padding: 1rem;
+}
+
+::placeholder {
+  text-align: right;
+  color: #aaa;
+}
+
+#address::placeholder,
+#message::placeholder {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 300;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.newsletter-group > label {
+  display: block;
+  margin-bottom: .75rem;
+}
+
+.newsletter-group div {
+  margin-bottom: .5rem;
+}
+
+.newsletter-group input {
+  margin-right: .5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: Merriweather, serif;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border: none;
+  color: #fff;
+  background-color: #4EBBB5;
+  border-radius: 3px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.main-footer {
+  background-color: #333;
+}
+
+.main-footer p {
+  color: #fff;
+  font-style: italic;
+}
+
+/* Media Query */
+@media only screen and (min-width: 768px) {
+  .form-group {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-group input,
+  .form-group select,
+  .zip-wrapper {
+    width: 80%;
+  }
+
+  .btn {
+    padding: 1.2rem;
+  }
+}
