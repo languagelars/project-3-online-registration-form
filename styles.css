@@ -80,7 +80,7 @@ fieldset {
 
 .form-group input,
 .form-group select,
-textarea {    
+.newsletter-group textarea {    
   border: none;
   background-color: #F2F2F2;
   padding: 1.25rem .75rem;
@@ -89,13 +89,19 @@ textarea {
   font-size: 1rem;
   color: #aaa;
   border-radius: 3px;
-}
-
-.form-group input[type="text"] {
   transition: all .3s;
 }
 
-.form-group input[type="text"]:focus {
+input[type="radio"],
+input[type="checkbox"] {
+  transition: all .3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.newsletter-group textarea:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
   outline: none;
   border: 1px solid #4EBBB5;
   box-shadow: 0 0 3px #4EBBB5;
@@ -139,6 +145,10 @@ textarea {
   margin-bottom: .75rem;
 }
 
+.newsletter-group > p {
+  margin-bottom: .75rem;
+}
+
 .newsletter-group div {
   margin-bottom: .5rem;
 }
@@ -159,11 +169,14 @@ textarea {
   border-radius: 3px;
   font-weight: 900;
   cursor: pointer;
-  transition: opacity .3s;
+  outline: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all .3s;
 }
 
 .btn:hover {
-  opacity: .8;
+  opacity: .9;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 .main-footer {
